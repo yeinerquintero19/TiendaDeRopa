@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MERVIN STORE - Tienda de ropa con diseños originales y exclusivos. Encuentra camisetas y más con estilo único." />
+  <title>MERVIN STORE | Tu Estilo, Sin Límites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">MS</div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Encuentra tu talla perfecta</span><i>✦</i>
+      <span>Diseños exclusivos MERVIN</span><i>✦</i>
+      <span>Envíos a toda la ciudad</span><i>✦</i>
+      <span>Calidad garantizada en cada prenda</span><i>✦</i>
+      <span>Encuentra tu talla perfecta</span><i>✦</i>
+      <span>Diseños exclusivos MERVIN</span><i>✦</i>
+      <span>Envíos a toda la ciudad</span><i>✦</i>
+      <span>Calidad garantizada en cada prenda</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" id="navLogo">
+        <img src="Gemini_Generated_Image_wi67iawi67iawi67.png" alt="MERVIN STORE Logo" class="logo-img" onerror="this.style.display='none';" />
+        <div class="logo-text">
+          <span class="logo-name">MERVIN STORE</span>
+          <span class="logo-tagline">Tu estilo, sin límites</span>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#catalogo" class="nav-link">Catálogo</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-admin" id="adminBtn" aria-label="Gestionar productos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          Gestionar
+        </button>
+        <button class="btn-cart" id="cartBtn" aria-label="Carrito de compras">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <img src="hero_clothing.jpg" alt="Colección MERVIN STORE" class="hero-img" onerror="this.style.display='none';" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Nueva Temporada 2026</div>
+      <h1 class="hero-title">TU ESTILO,<br/><em>sin límites</em></h1>
+      <p class="hero-subtitle">Prendas únicas con diseños originales y calidad que se nota. La tienda de ropa que lleva tu actitud a otro nivel.</p>
+      <div class="hero-actions">
+        <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+        <a href="#nosotros" class="btn-ghost">Nuestra Historia</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Recomendadas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">+5</span>
+          <span class="stat-label">Años de experiencia</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Calificación</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Desplazar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG ===== -->
+  <section class="catalog-section" id="catalogo">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">Catálogo</span>
+        <h2 class="section-title">NUESTRA COLECCIÓN</h2>
+        <p class="section-desc">Cada prenda es una pieza pensada para ti · <strong class="product-counter" id="productCounter">0 prendas</strong></p>
+      </div>
+
+      <div class="categories-grid" id="categoriesGrid"></div>
+
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="catalog-empty" id="catalogEmpty" style="display:none;">
+        <p>No hay prendas en esta categoría.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES STRIP ===== -->
+  <section class="features-section">
+    <div class="features-container">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="feature-text">
+          <strong>Envío a toda la ciudad</strong>
+          <span>Recibe tu pedido rápido</span>
+        </div>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-text">
+          <strong>Calidad garantizada</strong>
+          <span>En cada prenda</span>
+        </div>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div class="feature-text">
+          <strong>Diseños exclusivos</strong>
+          <span>Únicos en cada prenda</span>
+        </div>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <div class="feature-text">
+          <strong>Soporte personalizado</strong>
+          <span>Te asesoramos con tu talla</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section" id="nosotros">
+    <div class="about-container">
+      <div class="about-image-side">
+        <div class="about-logo-circle">
+          <img src="Gemini_Generated_Image_wi67iawi67iawi67.png" alt="MERVIN STORE Logo" class="about-logo-img" onerror="this.style.display='none';" />
+        </div>
+        <div class="about-float-badge">
+          <span class="float-num">+5</span>
+          <span class="float-text">años de<br/>experiencia</span>
+        </div>
+      </div>
+      <div class="about-content-side">
+        <span class="section-badge">Nuestra Historia</span>
+        <h2 class="about-title">Nacimos para que <em>vistas tu actitud</em></h2>
+        <p class="about-desc">En <strong>MERVIN STORE</strong> creemos que la ropa habla antes que las palabras. Cada diseño nace de la calle, la música y la cultura urbana, y se plasma con técnicas de estampado de alta calidad.</p>
+        <p class="about-desc">Usamos telas premium, cuidamos cada detalle y garantizamos que cada prenda que llevas sea cómoda, duradera y llena de personalidad.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <span class="value-icon">+</span>
+            <span>Diseños originales y exclusivos</span>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">+</span>
+            <span>Telas de alta calidad</span>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">+</span>
+            <span>Atención personalizada</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-primary">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIZE GUIDE ===== -->
+  <section class="size-guide-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-badge">Guía de Tallas</span>
+        <h2 class="section-title">ENCUENTRA TU TALLA</h2>
+        <p class="section-desc">Medidas en centímetros</p>
+      </div>
+      <div class="size-table-wrapper">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Talla</th>
+              <th>Busto (cm)</th>
+              <th>Cintura (cm)</th>
+              <th>Cadera (cm)</th>
+              <th>Largo (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="talla-badge">XS</span></td>
+              <td>80 – 84</td>
+              <td>60 – 64</td>
+              <td>86 – 90</td>
+              <td>62</td>
+            </tr>
+            <tr>
+              <td><span class="talla-badge">S</span></td>
+              <td>84 – 88</td>
+              <td>64 – 68</td>
+              <td>90 – 94</td>
+              <td>64</td>
+            </tr>
+            <tr class="highlighted-row">
+              <td><span class="talla-badge popular">M</span></td>
+              <td>88 – 92</td>
+              <td>68 – 72</td>
+              <td>94 – 98</td>
+              <td>66</td>
+            </tr>
+            <tr>
+              <td><span class="talla-badge">L</span></td>
+              <td>92 – 96</td>
+              <td>72 – 76</td>
+              <td>98 – 102</td>
+              <td>68</td>
+            </tr>
+            <tr>
+              <td><span class="talla-badge">XL</span></td>
+              <td>96 – 100</td>
+              <td>76 – 80</td>
+              <td>102 – 106</td>
+              <td>70</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-container">
+      <div class="contact-info-side">
+        <span class="section-badge light">Contacto</span>
+        <h2 class="contact-title">¿LISTO PARA TU <em>NUEVA PRENDA?</em></h2>
+        <p class="contact-desc">Escríbenos y te ayudamos a encontrar tu prenda perfecta, asesorarte con la talla o resolver cualquier consulta.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.87 9.64 19.29 19.29 0 01.86 1 2 2 0 012.83 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l.97-.97a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.17v1.75z"/></svg>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>+57 300 860 5563</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@mervin_store</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Ubicación</strong>
+              <span>Servicio a domicilio</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/573008605563?text=Hola%20MERVIN%20STORE%2C%20quisiera%20hacer%20un%20pedido" target="_blank" class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="Gemini_Generated_Image_wi67iawi67iawi67.png" alt="MERVIN STORE Logo" class="logo-img small" onerror="this.style.display='none';" />
+          <div>
+            <span class="logo-name">MERVIN STORE</span>
+            <span class="logo-tagline">Tu estilo, sin límites</span>
+          </div>
+        </div>
+        <p class="footer-desc">Ropa con actitud. Diseños exclusivos para personas únicas.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/" target="_blank" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/573008605563" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#catalogo">Guía de tallas</a></li>
+          <li><a href="#">Cuidado de prendas</a></li>
+          <li><a href="#">Política de cambios</a></li>
+          <li><a href="#">Envíos</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Novedades</h4>
+        <p>Entérate primero de nuestros nuevos diseños.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="tu@correo.com" />
+          <button type="submit" id="newsletterBtn">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MERVIN STORE. Todos los derechos reservados.</span>
+      <span>Hecho con pasión para amantes del estilo</span>
+    </div>
+  </footer>
+
+  <!-- ===== ADMIN PANEL ===== -->
+  <div class="modal-overlay" id="adminOverlay">
+    <div class="modal admin-modal">
+      <button class="modal-close" id="adminClose">✕</button>
+      <div class="admin-header">
+        <h3>Gestionar Productos</h3>
+        <p>Agrega o elimina prendas de tu tienda. Los cambios se guardan automáticamente.</p>
+      </div>
+      <div class="admin-body">
+        <div class="admin-form-side">
+          <h4>Agregar nuevo producto</h4>
+          <form id="adminForm">
+            <label class="field">
+              <span>Nombre del producto</span>
+              <input type="text" id="aName" placeholder="Ej. Camiseta Urban Black" required />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Precio (COP)</span>
+                <input type="number" id="aPrice" placeholder="40000" min="0" required />
+              </label>
+              <label class="field">
+                <span>Categoría</span>
+                <select id="aCategory">
+                  <option>Camisetas</option>
+                  <option>Hoodies</option>
+                  <option>Accesorios</option>
+                  <option>Otra</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span>Insignia</span>
+              <select id="aBadge">
+                <option value="none">Sin insignia</option>
+                <option value="Destacado">Destacado</option>
+                <option value="Popular">Popular</option>
+                <option value="Oferta">Oferta</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Descripción</span>
+              <textarea id="aDesc" rows="2" placeholder="Describe la prenda..."></textarea>
+            </label>
+            <label class="field">
+              <span>Tallas disponibles</span>
+              <div class="sizes-picker" id="aSizes">
+                <button type="button" class="size-pick active" data-size="S">S</button>
+                <button type="button" class="size-pick active" data-size="M">M</button>
+                <button type="button" class="size-pick active" data-size="L">L</button>
+                <button type="button" class="size-pick active" data-size="XL">XL</button>
+                <button type="button" class="size-pick" data-size="XXL">XXL</button>
+              </div>
+            </label>
+            <label class="field">
+              <span>Imagen del producto</span>
+              <div class="img-input">
+                <input type="file" id="aImageFile" accept="image/*" />
+                <span class="img-sep">o</span>
+                <input type="url" id="aImageUrl" placeholder="Pega una URL de imagen" />
+              </div>
+              <div class="img-preview" id="aImagePreview" style="display:none;"></div>
+            </label>
+            <button type="submit" class="btn-primary full-width">Agregar Producto</button>
+          </form>
+        </div>
+        <div class="admin-list-side">
+          <h4>Productos actuales (<span id="adminCount">0</span>)</h4>
+          <div class="admin-list" id="adminList"></div>
+          <button type="button" class="btn-reset" id="adminReset">Restablecer catálogo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Mi Carrito</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <p>Tu carrito está vacío</p>
+        <span>Agrega productos para comenzar</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span class="cart-total-price" id="cartTotalPrice">$0</span>
+      </div>
+      <button type="button" id="cartWhatsAppBtn" class="btn-primary full-width">Pagar por WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- ===== QUICK VIEW MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="productModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
