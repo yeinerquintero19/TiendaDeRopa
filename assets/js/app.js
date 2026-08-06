@@ -3,7 +3,7 @@
    Catálogo dinámico (localStorage) + carrito + panel admin
    ============================================ */
 
-const STORAGE_KEY = 'mervin_products_v4';
+const STORAGE_KEY = 'mervin_products_v5';
 const PHONE       = '573008605563';
 const PHONE_DISPLAY = '+57 300 860 5563';
 const ALL_SIZES   = ['S', 'M', 'L', 'XL', 'XXL'];
@@ -14,7 +14,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Camiseta Spider Dark',
     price: 79000,
     category: 'Camisetas',
-    img: 'LOGO.jpeg',
+    img: 'assets/images/LOGO.jpeg',
     desc: 'Camiseta oversized negra con diseño exclusivo MERVIN estilo oscuro. Serigrafía de alta definición en tela 100% algodón de peso medio. El estampado no se despega ni desvanece con los lavados.',
     sizes: ['S', 'M', 'L', 'XL'],
     badge: 'Destacado',
@@ -25,7 +25,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Camiseta The Amazing Spider-Man',
     price: 69000,
     category: 'Camisetas',
-    img: 'product2.jpg',
+    img: 'assets/images/product2.jpg',
     desc: 'Camiseta con estampado inspirado en The Amazing Spider-Man. Algodón suave de peso medio, edición coleccionable para fans. El estampado mantiene sus colores vibrantes lavado tras lavado.',
     sizes: ['S', 'M', 'L', 'XL'],
     badge: 'Popular'
@@ -35,7 +35,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Camiseta Cristiano Ronaldo',
     price: 75000,
     category: 'Camisetas',
-    img: 'product3.jpg',
+    img: 'assets/images/product3.jpg',
     desc: 'Camiseta con estampado exclusivo del CR7. Serigrafía de alta calidad sobre algodón premium, perfecta para los fanáticos del fútbol. Estampado resistente a los lavados.',
     sizes: ['S', 'M', 'L', 'XL'],
     badge: 'Oferta'
@@ -45,7 +45,7 @@ const DEFAULT_PRODUCTS = [
     name: 'Camiseta A Marte Más No Pude',
     price: 61000,
     category: 'Camisetas',
-    img: 'product4.jpg',
+    img: 'assets/images/product4.jpg',
     desc: 'Camiseta tributo a Diomedes Díaz con el diseño "A Marte Más No Pude". Algodón premium con serigrafía de alta definición, ideal para los amantes de la música vallenata.',
     sizes: ['S', 'M', 'L', 'XL']
   }

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "tienda-de-ropa-mervin",
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/products", "dest": "/api/products.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
